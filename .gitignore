@@ -1,0 +1,6 @@
+.venv/
+.tmp/
+__pycache__/
+doc/
+AGENTS*
+*.py[cod]
