@@ -6,30 +6,25 @@ Windows desktop audio converter written with Python `tkinter`.
 
 - Python 3.12
 - FFmpeg installed, configured in `ffmpeg_path.txt`, or available on `PATH`
-- Project virtual environment: `.venv`
 
-## First-time setup
+## Run
 
-The project already uses a dedicated virtual environment at `.venv`. To recreate
-it on another machine:
+From the project directory, run:
+
+```powershell
+.\run_converter.cmd
+```
+
+The launcher creates the project virtual environment at `.venv` when it is
+missing, installs `requirements.txt`, then starts the app. The `.venv` directory
+is intentionally not committed to Git.
+
+If you prefer to set up the environment manually:
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-```
-
-## Run
-
-Use the project virtual environment every time:
-
-```powershell
 .\.venv\Scripts\python.exe audio_converter.py
-```
-
-Or double-click:
-
-```powershell
-.\run_converter.cmd
 ```
 
 The app accepts a file through the Browse button or by drag-and-drop. It writes
